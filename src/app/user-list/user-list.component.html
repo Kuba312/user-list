@@ -1,0 +1,23 @@
+<ng-container *ngIf="!route.children.length">
+  <p-messages class="notification-message"></p-messages>
+  <p-orderList
+    [value]="users"
+    class="user-list"
+    header="Lista uzytkownikow"
+    filterPlaceholder="Szukaj po nazwie"
+    [listStyle]="{ height: 'auto' }"
+    filterBy="fullName"
+  >
+    <ng-template let-user pTemplate="item">
+      <div class="user-list__item">
+        <app-user [userDetails]="user"></app-user>
+      </div>
+    </ng-template>
+  </p-orderList>
+  <p-paginator
+    [rows]="rows"
+    [totalRecords]="totalRecords"
+    (onPageChange)="paginate($event)"
+  ></p-paginator>
+</ng-container>
+<router-outlet></router-outlet>

@@ -1,0 +1,35 @@
+.details-section {
+  margin: auto 0;
+
+  &__user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    font-size: $default-font-size;
+  }
+
+  &__avatar {
+    width: 18rem;
+    aspect-ratio: 5/5;
+    border-radius: 100vmax;
+    @include avatar-border;
+  }
+
+  &__name {
+    font-size: $big-font-size;
+    font-weight: 700;
+  }
+
+  &__email {
+    font-size: $default-font-size;
+    font-weight: 700;
+    text-decoration: underline;
+  }
+
+  &__text {
+    text-align: center;
+    max-width: 70%;
+    line-height: 1.5;
+  }
+}

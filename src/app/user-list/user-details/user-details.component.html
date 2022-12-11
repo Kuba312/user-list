@@ -1,0 +1,25 @@
+<section class="details-section">
+  <button
+    pButton
+    pRipple
+    type="button"
+    (click)="backToPreviousPage()"
+    label="POWRÓT"
+    class="p-button-outlined p-button-rounded p-button-secondary"
+  ></button>
+  <div class="details-section__user">
+    <img class="details-section__avatar" src="{{ user?.avatar || '-' }}" />
+    <span class="details-section__name">
+      {{ user?.first_name || "-" }} {{ user?.last_name || "-" }}
+    </span>
+    <span class="details-section__email">
+      {{ user?.email || "-" }}
+    </span>
+    <p class="details-section__text">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias soluta ad
+      consequuntur accusamus, harum similique possimus facilis enim nostrum sed
+      est tempora provident dolore nesciunt dignissimos expedita, numquam,
+      incidunt pariatur?
+    </p>
+  </div>
+</section>

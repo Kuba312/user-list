@@ -1,0 +1,64 @@
+.user {
+  display: flex;
+  justify-content: space-between;
+  font-size: $default-font-size;
+  color: $color-grey-dark-3;
+
+  &__basic-info {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    &--avatar {
+      border-radius: 100vmax;
+      @include avatar-border;
+    }
+
+    &--name {
+      text-transform: uppercase;
+      display: inline-block;
+      transition: all .1s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+
+      &:hover {
+        transform: translateY(-0.3rem);
+        color: transparent;
+        background-image: linear-gradient(
+          to right,
+          $color-blue,
+          $color-purple
+        );
+        -webkit-background-clip: text;
+      }
+    }
+  }
+  &__star {
+    transform: scale(1.8);
+    display: inline-block;
+    align-self: center;
+    transition: all .3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    backface-visibility: hidden;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    &:has(.pi-star) {
+      &:hover {
+        color: transparent;
+        background-image: linear-gradient(
+          to right,
+          $color-blue,
+          $color-purple
+        );
+        -webkit-background-clip: text;
+      }
+    }
+
+    &:has(.pi-star-fill){
+      color: transparent;
+      background-image: linear-gradient(
+        to right,
+        $color-blue,
+        $color-purple
+      );
+      -webkit-background-clip: text;
+    }
+  }
+}

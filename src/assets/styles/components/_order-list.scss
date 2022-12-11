@@ -1,0 +1,15 @@
+.user-list {
+  &__item {
+    padding: 1rem;
+    border: 1px solid $border-color;
+    box-shadow: $shadow-color 0 2px 8px 0px;
+  }
+}
+
+.p-orderlist .p-orderlist-controls {
+  display: none;
+}
+
+.p-orderlist .p-orderlist-header .p-orderlist-title {
+    font-size: $default-font-size;
+}
