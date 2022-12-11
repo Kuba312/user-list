@@ -35,3 +35,4 @@ Instruckcja:
 Dodatkowe informacje:
 1. Naciśnięcie na ikonkę gwiazdy spowoduje dodanie użytkownika do ulubionych
 2. Naciśnięcie na nazwę użytkownika spowduje przeniesienie na stronę szczegółów
+3. Aplikacja posiada testy jednoskowe
