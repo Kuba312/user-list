@@ -25,3 +25,13 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+Instruckcja:
+1. ściągnąć aplikacje
+2. zainstalować node_modules (npm install)
+3. uruchomić (ng serve/npm start)
+
+Dodatkowe informacje:
+1. Naciśnięcie na ikonkę gwiazdy spowoduje dodanie użytkownika do ulubionych
+2. Naciśnięcie na nazwę użytkownika spowduje przeniesienie na stronę szczegółów
