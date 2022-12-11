@@ -15,10 +15,12 @@ export class UserListComponent implements OnInit, OnDestroy {
   totalRecords!: number;
   subscripton?: Subscription;
 
-  constructor(private userApiService: UserApiService, public route: ActivatedRoute) { }
+  constructor(private userApiService: UserApiService, public route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    this.getUsersList();
+    this.route.params.subscribe(() => {
+      this.getUsersList();
+    });
   }
 
 

@@ -2,6 +2,8 @@ import { DebugElement } from '@angular/core';
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
+import { RouterTestingModule } from '@angular/router/testing';
+import { TooltipModule } from 'primeng/tooltip';
 import { USER_MOCK } from 'server/db-data';
 import { AppMessageService } from 'src/app/services/app-message-service/app-message.service';
 import { LocalStorageService } from 'src/app/services/local-storage-service/local-storage.service';
@@ -25,7 +27,8 @@ describe('UserComponent', () => {
      TestBed.configureTestingModule({
       declarations: [UserComponent],
       imports: [
-        RouterModule.forRoot([])
+        RouterTestingModule.withRoutes([]),
+        TooltipModule
       ],
       providers: [
         { provide: LocalStorageService, useValue: localStorageService },

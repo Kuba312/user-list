@@ -1,4 +1,5 @@
 <section class="details-section">
+  <p-messages class="notification-message"></p-messages>
   <button
     pButton
     pRipple
@@ -11,6 +12,15 @@
     <img class="details-section__avatar" src="{{ user?.avatar || '-' }}" />
     <span class="details-section__name">
       {{ user?.first_name || "-" }} {{ user?.last_name || "-" }}
+      <div
+        class="details-section__star"
+        pTooltip="{{
+          user?.isFavourite ? 'Usuń z ulubionych' : 'Dodaj do ulubionych'
+        }}"
+        (click)="addToFavorite(user.id)"
+      >
+        <i class="pi pi-star{{ user?.isFavourite ? '-fill' : '' }}"></i>
+      </div>
     </span>
     <span class="details-section__email">
       {{ user?.email || "-" }}

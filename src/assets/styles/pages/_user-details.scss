@@ -17,8 +17,19 @@
   }
 
   &__name {
+    display: flex;
     font-size: $big-font-size;
     font-weight: 700;
+    gap: 1rem;
+    position: relative;
+  }
+
+  &__star {
+    @include star;
+    position: absolute;
+    cursor: pointer;
+    top: -28%;
+    left: 109%;
   }
 
   &__email {

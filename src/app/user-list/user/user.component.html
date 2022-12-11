@@ -1,11 +1,21 @@
 <div class="user">
   <div class="user__basic-info">
-    <img class="user__basic-info--avatar" src="{{ userDetails.avatar || '-' }}" width="48" />
+    <img
+      class="user__basic-info--avatar"
+      src="{{ userDetails.avatar || '-' }}"
+      width="48"
+    />
     <div class="user__basic-info--name" [routerLink]="[userDetails?.id]">
-      {{ userDetails.first_name || '-'}} {{ userDetails?.last_name || '-'}}
+      {{ userDetails.first_name || "-" }} {{ userDetails?.last_name || "-" }}
     </div>
   </div>
-  <div class="user__star" (click)="addToFavorite(userDetails.id)">
+  <div
+    class="user__star"
+    pTooltip="{{
+      userDetails.isFavourite ? 'Usuń z ulubionych' : 'Dodaj do ulubionych'
+    }}"
+    (click)="addToFavorite(userDetails.id)"
+  >
     <i class="pi pi-star{{ userDetails.isFavourite ? '-fill' : '' }}"></i>
   </div>
 </div>

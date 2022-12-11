@@ -22,7 +22,7 @@ export class UserApiService {
             user.isFavourite = JSON.parse(localStorage?.getItem('favoriteUsers'))?.includes(user.id) ?? false;
             user.fullName = `${user.first_name} ${user.last_name}`
             return user;
-          })                    
+          })
           return users;
         })
       )
@@ -34,6 +34,10 @@ export class UserApiService {
       `${commonEnvironment.apiEndpoints.USERS}/${id}`
     )
       .pipe(
+        map((user: any) => {
+          user.data.isFavourite = JSON.parse(localStorage?.getItem('favoriteUsers'))?.includes(user.data.id) ?? false;
+          return user;
+        }),
         map((response: any) => response?.data)
       )
   }
