@@ -37,7 +37,7 @@ Dodatkowe informacje:
 2. Naciśnięcie na nazwę użytkownika spowduje przeniesienie na stronę szczegółów
 3. Aplikacja posiada testy jednoskowe
 
-Zamieszczam również rezultat testów (można je również uruchomić w aplikacj komendą ng test):
+Zamieszczam również rezultat testów (można je również uruchomić w aplikacji komendą ng test):
 ![Zrzut ekranu 2022-12-11 o 20 16 42](https://user-images.githubusercontent.com/61107535/206924048-1ee93d68-f21f-4efe-99ea-08b75a25293a.png)
 
 
